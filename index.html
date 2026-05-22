@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dra. Ana Loureiro | Odontologia Premium – Vila Velha/ES</title>
+  <meta name="description" content="Sorria com confiança. Implantes, clareamento e alinhadores invisíveis com a Dra. Ana Loureiro – CRO-ES XXXXX. Agende pelo WhatsApp." />
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!-- ║  SUBSTITUA: Google Tag Manager ID   ║ -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <!-- <script>(function(w,d,s,l,i){...})(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
+
+  <!-- Fonte premium: Cormorant Garamond (display) + DM Sans (corpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'serif'],
+            body: ['"DM Sans"', 'sans-serif'],
+          },
+          colors: {
+            azure: {
+              50:  '#f0f6ff',
+              100: '#ddeaf9',
+              200: '#b8d3f2',
+              300: '#82b3e8',
+              400: '#4a8fd8',
+              500: '#2872c4',
+              600: '#1a5ba8',
+              700: '#174a8a',
+              800: '#163f72',
+              900: '#12315a',
+            },
+            cream: '#f8f9fb',
+            wa: '#25D366',       /* WhatsApp green */
+            'wa-dark': '#1ebe5d',
+          },
+          boxShadow: {
+            card: '0 2px 24px 0 rgba(24,63,114,.09)',
+            hero: '0 8px 60px 0 rgba(24,63,114,.18)',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: #f8f9fb; color: #1a2336; }
+
+    /* ── Thin decorative rule ── */
+    .rule { display:block; width:48px; height:3px; background:linear-gradient(90deg,#2872c4,#82b3e8); border-radius:99px; }
+
+    /* ── Fade-up animation ── */
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(28px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+    .fade-up { animation: fadeUp .7s ease both; }
+    .delay-1 { animation-delay:.12s; }
+    .delay-2 { animation-delay:.24s; }
+    .delay-3 { animation-delay:.36s; }
+    .delay-4 { animation-delay:.48s; }
+
+    /* ── Hero gradient overlay ── */
+    .hero-overlay {
+      background: linear-gradient(105deg,
+        rgba(18,49,90,.88) 0%,
+        rgba(24,63,114,.65) 55%,
+        rgba(40,114,196,.20) 100%);
+    }
+
+    /* ── Floating WhatsApp button ── */
+    .wa-float {
+      position: fixed; bottom: 24px; right: 20px; z-index: 999;
+      width: 58px; height: 58px;
+      background: #25D366;
+      border-radius: 50%;
+      box-shadow: 0 4px 18px rgba(37,211,102,.55);
+      display: flex; align-items: center; justify-content: center;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 24px rgba(37,211,102,.7); }
+
+    /* ── Service card hover ── */
+    .service-card { transition: transform .25s ease, box-shadow .25s ease; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 36px rgba(24,63,114,.14); }
+
+    /* ── Testimonial card ── */
+    .testi-card { transition: transform .25s ease; }
+    .testi-card:hover { transform: translateY(-3px); }
+
+    /* ── Subtle noise texture on cream sections ── */
+    .noise-bg {
+      background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E"),
+        linear-gradient(180deg, #f0f6ff 0%, #f8f9fb 100%);
+    }
+
+    /* ── Stars ── */
+    .stars { color: #f5a623; letter-spacing: 2px; }
+
+    /* ── Section label ── */
+    .section-label {
+      font-size: .72rem; font-weight: 600; letter-spacing: .18em;
+      text-transform: uppercase; color: #2872c4;
+    }
+  </style>
+</head>
+
+<body class="font-body">
+
+<!-- ═══════════════════════════════════════════════ -->
+<!--  FLOATING WHATSAPP BUTTON                      -->
+<!-- ═══════════════════════════════════════════════ -->
+<!-- SUBSTITUA: número do WhatsApp abaixo (formato internacional sem '+') -->
+<a href="https://wa.me/5527999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
+   target="_blank" rel="noopener" aria-label="Falar no WhatsApp" class="wa-float">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.305A9.935 9.935 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 01-4.073-1.117l-.292-.174-3.023.793.806-2.944-.19-.302A7.944 7.944 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/>
+  </svg>
+</a>
+
+
+<!-- ═══════════════════════════════════════════════ -->
+<!--  HEADER / NAV                                  -->
+<!-- ═══════════════════════════════════════════════ -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur border-b border-azure-100/60" style="box-shadow:0 1px 16px rgba(24,63,114,.07)">
+  <div class="max-w-5xl mx-auto px-5 py-3 flex items-center justify-between">
+
+    <!-- SUBSTITUA: logo da clínica -->
+    <div class="flex items-center gap-2">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="16" fill="#2872c4"/>
+        <path d="M10 10c0-1.1.9-2 2-2h8a2 2 0 012 2v4c0 4.4-3.6 8-8 8s-4-3.6-4-8v-4z" fill="white" opacity=".9"/>
+        <rect x="15" y="8" width="2" height="12" rx="1" fill="#2872c4"/>
+      </svg>
+      <span class="font-display text-lg font-semibold text-azure-800 leading-tight">
+        Dra. Ana Loureiro<br/><span class="text-xs font-body font-normal text-azure-400 tracking-wide">Odontologia Premium</span>
+      </span>
+    </div>
+
+    <!-- CTA Header (visível desktop) -->
+    <!-- SUBSTITUA: número do WhatsApp -->
+    <a href="https://wa.me/5527999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
+       target="_blank" rel="noopener"
+       class="hidden sm:flex items-center gap-2 bg-wa hover:bg-wa-dark text-white text-sm font-semibold px-4 py-2 rounded-full transition-colors duration-200">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.305A9.935 9.935 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 01-4.073-1.117l-.292-.174-3.023.793.806-2.944-.19-.302A7.944 7.944 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+      Agendar Consulta
+    </a>
+  </div>
+</header>
+
+
+<!-- ═══════════════════════════════════════════════ -->
+<!--  1. HERO SECTION                               -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="relative min-h-screen flex items-center pt-16 overflow-hidden">
+
+  <!-- Background image — SUBSTITUA pela foto real da clínica ou dentista -->
+  <div class="absolute inset-0">
+    <img
+      src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1400&q=80&fit=crop"
+      alt="Clínica Odontológica"
+      class="w-full h-full object-cover object-center"
+    />
+    <div class="absolute inset-0 hero-overlay"></div>
+  </div>
+
+  <!-- Conteúdo Hero -->
+  <div class="relative max-w-5xl mx-auto px-5 py-20 md:py-28 w-full">
+    <div class="max-w-xl">
+
+      <p class="fade-up section-label text-azure-200 mb-4">
+        ✦ Odontologia de excelência · Vila Velha / ES
+      </p>
+
+      <!-- ╔═════════════════════════════════════════╗ -->
+      <!-- ║  HEADLINE — 3 variações para teste A/B  ║ -->
+      <!-- ╠═════════════════════════════════════════╣ -->
+      <!-- VARIAÇÃO A (padrão): -->
+      <h1 class="fade-up delay-1 font-display text-white font-bold leading-tight mb-5"
+          style="font-size:clamp(2.1rem,5.5vw,3.4rem);">
+        Um sorriso que transforma a sua vida começa aqui.
+      </h1>
+      <!-- VARIAÇÃO B (teste): "Confie o seu sorriso a quem cuida de verdade." -->
+      <!-- VARIAÇÃO C (teste): "Dentes perfeitos, sem dor e sem surpresas no bolso." -->
+
+      <p class="fade-up delay-2 text-azure-100 text-base md:text-lg leading-relaxed mb-8" style="max-width:420px;">
+        Implantes, clareamento e alinhadores invisíveis com a tecnologia mais avançada do Espírito Santo — e um cuidado que você vai sentir desde a primeira consulta.
+      </p>
+
+      <!-- CTA Principal — SUBSTITUA o número do WhatsApp -->
+      <div class="fade-up delay-3 flex flex-col sm:flex-row gap-3">
+        <a href="https://wa.me/5527999999999?text=Olá!%20Quero%20agendar%20minha%20avaliação%20gratuita."
+           target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center gap-2 bg-wa hover:bg-wa-dark text-white font-semibold text-base px-7 py-4 rounded-2xl transition-all duration-200 shadow-hero">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.305A9.935 9.935 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 01-4.073-1.117l-.292-.174-3.023.793.806-2.944-.19-.302A7.944 7.944 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+          Quero minha avaliação gratuita
+        </a>
+        <a href="#servicos"
+           class="inline-flex items-center justify-center gap-1 text-white/80 hover:text-white text-sm font-medium transition-colors px-4">
+          Ver tratamentos
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+      </div>
+
+      <!-- Social proof mini -->
+      <div class="fade-up delay-4 mt-10 flex items-center gap-3">
+        <div class="flex -space-x-2">
+          <!-- Avatares placeholder — SUBSTITUA pelas fotos reais de pacientes -->
+          <img src="https://i.pravatar.cc/36?img=47" class="w-9 h-9 rounded-full border-2 border-white object-cover" alt="Paciente" />
+          <img src="https://i.pravatar.cc/36?img=12" class="w-9 h-9 rounded-full border-2 border-white object-cover" alt="Paciente" />
+          <img src="https://i.pravatar.cc/36?img=33" class="w-9 h-9 rounded-full border-2 border-white object-cover" alt="Paciente" />
+        </div>
+        <div>
+          <div class="stars text-sm">★★★★★</div>
+          <p class="text-azure-200 text-xs">+300 pacientes satisfeitos</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════ -->
+<!--  2. BARRA DE BENEFÍCIOS                        -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="bg-white border-b border-azure-100">
+  <div class="max-w-5xl mx-auto px-5 py-10 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4">
+
+    <!-- Benefício 1 -->
+    <div class="flex flex-col items-center text-center gap-2">
+      <div class="w-12 h-12 rounded-2xl bg-azure-50 flex items-center justify-center mb-1">
+        <!-- Ícone: escudo / segurança -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2872c4" stroke-width="1.8">
+          <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z"/>
+          <polyline points="9 12 11 14 15 10"/>
+        </svg>
+      </div>
+      <p class="font-semibold text-azure-800 text-sm leading-snug">Ambiente 100% Esterilizado</p>
+      <p class="text-azure-400 text-xs leading-relaxed">Protocolos rigorosos de biossegurança</p>
+    </div>
+
+    <!-- Benefício 2 -->
+    <div class="flex flex-col items-center text-center gap-2">
+      <div class="w-12 h-12 rounded-2xl bg-azure-50 flex items-center justify-center mb-1">
+        <!-- Ícone: pagamento / cartão -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2872c4" stroke-width="1.8">
+          <rect x="2" y="5" width="20" height="14" rx="2"/>
+          <line x1="2" y1="10" x2="22" y2="10"/>
+          <line x1="6" y1="15" x2="9" y2="15"/>
+        </svg>
+      </div>
+      <p class="font-semibold text-azure-800 text-sm leading-snug">Parcelamento em Até 18x</p>
+      <p class="text-azure-400 text-xs leading-relaxed">Sem entrada e sem burocracia</p>
+    </div>
+
+    <!-- Benefício 3 -->
+    <div class="flex flex-col items-center text-center gap-2">
+      <div class="w-12 h-12 rounded-2xl bg-azure-50 flex items-center justify-center mb-1">
+        <!-- Ícone: relógio / horário -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2872c4" stroke-width="1.8">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+      </div>
+      <p class="font-semibold text-azure-800 text-sm leading-snug">Atendimento Emergencial</p>
+      <p class="text-azure-400 text-xs leading-relaxed">Dor de dente? Atendemos hoje</p>
+    </div>
+
+    <!-- Benefício 4 -->
+    <div class="flex flex-col items-center text-center gap-2">
+      <div class="w-12 h-12 rounded-2xl bg-azure-50 flex items-center justify-center mb-1">
+        <!-- Ícone: estrela / qualidade -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2872c4" stroke-width="1.8">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </div>
+      <p class="font-semibold text-azure-800 text-sm leading-snug">Nota 5★ no Google</p>
+      <p class="text-azure-400 text-xs leading-relaxed">Mais de 300 avaliações verificadas</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════ -->
+<!--  3. SOBRE A PROFISSIONAL                       -->
+<!-- ═══════════════════════════════════════════════ -->
+<section id="sobre" class="noise-bg py-20 md:py-28">
+  <div class="max-w-5xl mx-auto px-5">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Foto — SUBSTITUA pela foto real da dentista -->
+      <div class="relative">
+        <div class="absolute -top-4 -left-4 w-full h-full rounded-3xl bg-azure-100/60 -z-10"></div>
+        <img
+          src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80&fit=crop&crop=faces"
+          alt="Dra. Ana Loureiro – Cirurgiã-Dentista"
+          class="w-full h-80 md:h-[460px] object-cover object-top rounded-3xl shadow-card"
+        />
+        <!-- Badge CRO -->
+        <div class="absolute -bottom-5 right-6 bg-white rounded-2xl px-5 py-3 shadow-card flex items-center gap-3">
+          <div class="w-9 h-9 bg-azure-600 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="9" y1="15" x2="15" y2="15"/>
+            </svg>
+          </div>
+          <div>
+            <!-- SUBSTITUA pelo CRO real -->
+            <p class="text-azure-800 font-semibold text-sm">CRO-ES XXXXX</p>
+            <p class="text-azure-400 text-xs">Registro Profissional</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Texto -->
+      <div>
+        <p class="section-label mb-3">Conheça a dentista</p>
+        <span class="rule mb-5"></span>
+
+        <!-- SUBSTITUA pelo nome real -->
+        <h2 class="font-display text-azure-900 font-bold leading-tight mb-5"
+            style="font-size:clamp(1.7rem,4vw,2.6rem);">
+          Dra. Ana Loureiro
+        </h2>
+
+        <!-- SUBSTITUA pelo texto real da profissional -->
+        <p class="text-azure-700 leading-relaxed mb-4 text-base">
+          Formada pela <strong>Universidade Federal do Espírito Santo</strong>, com especialização em Implantodontia e Odontologia Estética, a Dra. Ana Loureiro acredita que cada paciente merece ser tratado com atenção individualizada — sem pressa, sem dor e sem surpresas.
+        </p>
+        <p class="text-azure-600 leading-relaxed mb-8 text-base">
+          Com mais de <strong>10 anos de experiência</strong> e casos transformadores que falam por si, ela combina a mais alta tecnologia com o calor humano que todo paciente precisa sentir na cadeira odontológica.
+        </p>
+
+        <!-- Credenciais -->
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3 text-sm text-azure-700">
+            <svg class="flex-shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2872c4" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            Especialista em Implantodontia – CFO
+          </li>
+          <li class="flex items-start gap-3 text-sm text-azure-700">
+            <svg class="flex-shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2872c4" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            Certificada em Alinhadores Invisíveis Invisalign®
+          </li>
+          <li class="flex items-start gap-3 text-sm text-azure-700">
+            <svg class="flex-shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2872c4" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            Membro da Associação Brasileira de Odontologia – ABO-ES
+          </li>
+        </ul>
+
+        <!-- SUBSTITUA o número do WhatsApp -->
+        <a href="https://wa.me/5527999999999?text=Olá%20Dra.%20Ana!%20Gostaria%20de%20agendar%20uma%20consulta."
+           target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 bg-azure-600 hover:bg-azure-700 text-white font-semibold px-6 py-3 rounded-2xl transition-colors duration-200 text-sm">
+          Agendar com a Dra. Ana
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════ -->
+<!--  4. SERVIÇOS PRINCIPAIS                        -->
+<!-- ═══════════════════════════════════════════════ -->
+<section id="servicos" class="bg-white py-20 md:py-28">
+  <div class="max-w-5xl mx-auto px-5">
+
+    <div class="text-center mb-14">
+      <p class="section-label mb-3">O que oferecemos</p>
+      <span class="rule mx-auto mb-5"></span>
+      <h2 class="font-display text-azure-900 font-bold"
+          style="font-size:clamp(1.7rem,4vw,2.5rem);">
+        Tratamentos que mudam sorrisos<br class="hidden md:block"/> e transformam vidas
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- Card 1: Implantes -->
+      <div class="service-card bg-cream rounded-3xl p-6 shadow-card border border-azure-100/50">
+        <div class="w-12 h-12 bg-azure-600 rounded-2xl flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8">
+            <path d="M12 2a4 4 0 014 4v1h1a2 2 0 012 2v3a2 2 0 01-2 2h-1v6a2 2 0 01-2 2h-4a2 2 0 01-2-2v-6H7a2 2 0 01-2-2V9a2 2 0 012-2h1V6a4 4 0 014-4z"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-azure-800 text-base mb-2">Implantes Dentários</h3>
+        <p class="text-azure-500 text-sm leading-relaxed mb-5">
+          Recupere a função e a estética do sorriso com implantes de titânio de última geração, que duram décadas.
+        </p>
+        <!-- SUBSTITUA o número do WhatsApp -->
+        <a href="https://wa.me/5527999999999?text=Olá!%20Quero%20saber%20mais%20sobre%20Implantes%20Dentários."
+           target="_blank" rel="noopener"
+           class="inline-flex items-center gap-1 text-azure-600 hover:text-azure-800 font-semibold text-sm transition-colors">
+          Saiba mais
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <!-- Card 2: Clareamento -->
+      <div class="service-card bg-cream rounded-3xl p-6 shadow-card border border-azure-100/50">
+        <div class="w-12 h-12 bg-azure-500 rounded-2xl flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="2" x2="12" y2="4"/>
+            <line x1="12" y1="20" x2="12" y2="22"/>
+            <line x1="2" y1="12" x2="4" y2="12"/>
+            <line x1="20" y1="12" x2="22" y2="12"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-azure-800 text-base mb-2">Clareamento Dental</h3>
+        <p class="text-azure-500 text-sm leading-relaxed mb-5">
+          Até 8 tons mais claro em uma única sessão. Clareamento a laser seguro, rápido e sem sensibilidade.
+        </p>
+        <a href="https://wa.me/5527999999999?text=Olá!%20Quero%20saber%20mais%20sobre%20Clareamento%20Dental."
+           target="_blank" rel="noopener"
+           class="inline-flex items-center gap-1 text-azure-600 hover:text-azure-800 font-semibold text-sm transition-colors">
+          Saiba mais
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <!-- Card 3: Alinhadores -->
+      <div class="service-card bg-cream rounded-3xl p-6 shadow-card border border-azure-100/50">
+        <div class="w-12 h-12 bg-azure-400 rounded-2xl flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8">
+            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+            <line x1="9" y1="9" x2="9.01" y2="9"/>
+            <line x1="15" y1="9" x2="15.01" y2="9"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-azure-800 text-base mb-2">Alinhadores Invisíveis</h3>
+        <p class="text-azure-500 text-sm leading-relaxed mb-5">
+          Corrija o posicionamento dos dentes de forma discreta, sem braquetes metálicos e no seu ritmo de vida.
+        </p>
+        <a href="https://wa.me/5527999999999?text=Olá!%20Quero%20saber%20mais%20sobre%20Alinhadores%20Invisíveis."
+           target="_blank" rel="noopener"
+           class="inline-flex items-center gap-1 text-azure-600 hover:text-azure-800 font-semibold text-sm transition-colors">
+          Saiba mais
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <!-- Card 4: Estética Dental -->
+      <div class="service-card bg-cream rounded-3xl p-6 shadow-card border border-azure-100/50">
+        <div class="w-12 h-12 bg-azure-300 rounded-2xl flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8">
+            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-azure-800 text-base mb-2">Estética Dental</h3>
+        <p class="text-azure-500 text-sm leading-relaxed mb-5">
+          Lentes de contato dental, facetas e design do sorriso para um resultado natural e deslumbrante.
+        </p>
+        <a href="https://wa.me/5527999999999?text=Olá!%20Quero%20saber%20mais%20sobre%20Estética%20Dental."
+           target="_blank" rel="noopener"
+           class="inline-flex items-center gap-1 text-azure-600 hover:text-azure-800 font-semibold text-sm transition-colors">
+          Saiba mais
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- CTA seção serviços -->
+    <div class="text-center mt-12">
+      <!-- SUBSTITUA o número do WhatsApp -->
+      <a href="https://wa.me/5527999999999?text=Olá!%20Quero%20agendar%20minha%20avaliação%20gratuita."
+         target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 bg-wa hover:bg-wa-dark text-white font-semibold px-8 py-4 rounded-2xl transition-colors duration-200 shadow-card text-base">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.305A9.935 9.935 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 01-4.073-1.117l-.292-.174-3.023.793.806-2.944-.19-.302A7.944 7.944 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+        Agendar avaliação gratuita agora
+      </a>
+      <p class="text-azure-400 text-xs mt-3">Resposta em até 5 minutos ⚡</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════ -->
+<!--  5. PROVA SOCIAL – DEPOIMENTOS                 -->
+<!-- ═══════════════════════════════════════════════ -->
+<section id="depoimentos" class="noise-bg py-20 md:py-28">
+  <div class="max-w-5xl mx-auto px-5">
+
+    <div class="text-center mb-14">
+      <p class="section-label mb-3">O que dizem nossos pacientes</p>
+      <span class="rule mx-auto mb-5"></span>
+      <h2 class="font-display text-azure-900 font-bold"
+          style="font-size:clamp(1.7rem,4vw,2.5rem);">
+        Mais de 300 sorrisos transformados
+      </h2>
+      <!-- Google Rating badge -->
+      <div class="inline-flex items-center gap-2 mt-4 bg-white rounded-full px-4 py-2 shadow-card border border-azure-100/50">
+        <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        <span class="text-azure-700 font-semibold text-sm">4.9</span>
+        <span class="stars text-sm">★★★★★</span>
+        <span class="text-azure-400 text-xs">(312 avaliações)</span>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <!-- Depoimento 1 — SUBSTITUA pelo real -->
+      <div class="testi-card bg-white rounded-3xl p-6 shadow-card border border-azure-100/40">
+        <div class="stars text-base mb-3">★★★★★</div>
+        <p class="text-azure-700 text-sm leading-relaxed mb-5 italic">
+          "Eu tinha muito medo de dentista, mas a Dra. Ana me deixou completamente à vontade. Fiz os alinhadores e o resultado foi incrível. Não me arrependo nada!"
+        </p>
+        <div class="flex items-center gap-3">
+          <img src="https://i.pravatar.cc/40?img=47" class="w-10 h-10 rounded-full object-cover" alt="Paciente Mariana" />
+          <div>
+            <p class="font-semibold text-azure-800 text-sm">Mariana S.</p>
+            <p class="text-azure-400 text-xs">Vila Velha · ES</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Depoimento 2 — SUBSTITUA pelo real -->
+      <div class="testi-card bg-white rounded-3xl p-6 shadow-card border border-azure-100/40">
+        <div class="stars text-base mb-3">★★★★★</div>
+        <p class="text-azure-700 text-sm leading-relaxed mb-5 italic">
+          "Fiz implante e fiquei emocionado com o resultado. Parece dente de verdade, não dói nada e o atendimento foi excepcional. Recomendo sem hesitar!"
+        </p>
+        <div class="flex items-center gap-3">
+          <img src="https://i.pravatar.cc/40?img=12" class="w-10 h-10 rounded-full object-cover" alt="Paciente Carlos" />
+          <div>
+            <p class="font-semibold text-azure-800 text-sm">Carlos M.</p>
+            <p class="text-azure-400 text-xs">Vitória · ES</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Depoimento 3 — SUBSTITUA pelo real -->
+      <div class="testi-card bg-white rounded-3xl p-6 shadow-card border border-azure-100/40">
+        <div class="stars text-base mb-3">★★★★★</div>
+        <p class="text-azure-700 text-sm leading-relaxed mb-5 italic">
+          "Clareei os dentes aqui e fiquei maravilhada! Em uma sessão já vi diferença enorme. Clínica linda, equipe super atenciosa. Com certeza voltarei sempre!"
+        </p>
+        <div class="flex items-center gap-3">
+          <img src="https://i.pravatar.cc/40?img=33" class="w-10 h-10 rounded-full object-cover" alt="Paciente Fernanda" />
+          <div>
+            <p class="font-semibold text-azure-800 text-sm">Fernanda P.</p>
+            <p class="text-azure-400 text-xs">Serra · ES</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════ -->
+<!--  CTA INTERMEDIÁRIO                             -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="bg-azure-700 py-16">
+  <div class="max-w-2xl mx-auto px-5 text-center">
+    <h2 class="font-display text-white font-bold mb-4"
+        style="font-size:clamp(1.5rem,4vw,2.2rem);">
+      Sua avaliação gratuita está esperando por você
+    </h2>
+    <p class="text-azure-200 text-base mb-8 leading-relaxed">
+      Clique abaixo e fale diretamente com a nossa equipe via WhatsApp. Respondemos em minutos.
+    </p>
+    <!-- SUBSTITUA o número do WhatsApp -->
+    <a href="https://wa.me/5527999999999?text=Olá!%20Quero%20agendar%20minha%20avaliação%20gratuita."
+       target="_blank" rel="noopener"
+       class="inline-flex items-center gap-2 bg-wa hover:bg-wa-dark text-white font-bold px-8 py-4 rounded-2xl transition-colors duration-200 text-base shadow-hero">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.305A9.935 9.935 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 01-4.073-1.117l-.292-.174-3.023.793.806-2.944-.19-.302A7.944 7.944 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+      Quero agendar agora pelo WhatsApp
+    </a>
+    <p class="text-azure-300 text-xs mt-4">🔒 Sem compromisso · Resposta em até 5 minutos</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════ -->
+<!--  6. RODAPÉ / FOOTER                            -->
+<!-- ═══════════════════════════════════════════════ -->
+<footer class="bg-azure-900 text-azure-200">
+
+  <!-- Conteúdo principal -->
+  <div class="max-w-5xl mx-auto px-5 py-14 grid md:grid-cols-3 gap-10">
+
+    <!-- Coluna 1: Info da clínica -->
+    <div>
+      <div class="flex items-center gap-2 mb-5">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="16" r="16" fill="#4a8fd8"/>
+          <path d="M10 10c0-1.1.9-2 2-2h8a2 2 0 012 2v4c0 4.4-3.6 8-8 8s-4-3.6-4-8v-4z" fill="white" opacity=".9"/>
+          <rect x="15" y="8" width="2" height="12" rx="1" fill="#4a8fd8"/>
+        </svg>
+        <span class="font-display text-white font-semibold text-base">Dra. Ana Loureiro</span>
+      </div>
+      <p class="text-azure-300 text-sm leading-relaxed mb-4">
+        <!-- SUBSTITUA pelo endereço real -->
+        Rua das Palmeiras, 1234 – Sala 501<br/>
+        Bairro Praia da Costa<br/>
+        Vila Velha · ES · CEP 29100-000
+      </p>
+      <div class="space-y-2 text-sm">
+        <!-- SUBSTITUA pelo telefone real -->
+        <a href="tel:+5527999999999" class="flex items-center gap-2 text-azure-300 hover:text-white transition-colors">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          (27) 9 9999-9999
+        </a>
+        <!-- SUBSTITUA pelo e-mail real -->
+        <a href="mailto:contato@draanaloureiro.com.br" class="flex items-center gap-2 text-azure-300 hover:text-white transition-colors">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          contato@draanaloureiro.com.br
+        </a>
+      </div>
+    </div>
+
+    <!-- Coluna 2: Horários -->
+    <div>
+      <h4 class="text-white font-semibold text-sm mb-5 uppercase tracking-widest">Horário de Atendimento</h4>
+      <!-- SUBSTITUA pelos horários reais -->
+      <ul class="space-y-3 text-sm">
+        <li class="flex justify-between border-b border-azure-800 pb-3">
+          <span class="text-azure-300">Segunda a Sexta</span>
+          <span class="text-white font-medium">08h – 18h</span>
+        </li>
+        <li class="flex justify-between border-b border-azure-800 pb-3">
+          <span class="text-azure-300">Sábado</span>
+          <span class="text-white font-medium">08h – 12h</span>
+        </li>
+        <li class="flex justify-between">
+          <span class="text-azure-300">Domingo</span>
+          <span class="text-azure-500">Fechado</span>
+        </li>
+      </ul>
+      <div class="mt-6 bg-wa/10 border border-wa/30 rounded-2xl px-4 py-3">
+        <p class="text-wa text-xs font-medium">⚡ Emergências: atendemos fora do horário. Chame no WhatsApp!</p>
+      </div>
+    </div>
+
+    <!-- Coluna 3: Mapa placeholder -->
+    <div>
+      <h4 class="text-white font-semibold text-sm mb-5 uppercase tracking-widest">Como Chegar</h4>
+      <!-- SUBSTITUA pelo iframe do Google Maps real:
+           Vá em maps.google.com → Compartilhar → Incorporar mapa → copie o iframe -->
+      <div class="rounded-2xl overflow-hidden border border-azure-700">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.1234567890!2d-40.2900!3d-20.3290!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDE5JzQ0LjQiUyA0MMKwMTcnMjQuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+          width="100%" height="180" style="border:0;" allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Localização da Clínica">
+        </iframe>
+      </div>
+      <!-- SUBSTITUA com o link do Google Maps real -->
+      <a href="https://maps.google.com" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-1 text-azure-400 hover:text-white text-xs mt-3 transition-colors">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+        Abrir no Google Maps
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="border-t border-azure-800">
+    <div class="max-w-5xl mx-auto px-5 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-azure-500">
+      <!-- SUBSTITUA pelo nome real da clínica e CNPJ -->
+      <p>© 2025 Dra. Ana Loureiro Odontologia. CNPJ XX.XXX.XXX/0001-XX. Todos os direitos reservados.</p>
+      <p>CRO-ES XXXXX · Clínica registrada nos conselhos competentes</p>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>
